@@ -1,23 +1,22 @@
-# Crystal Programming Language
+# Crystal编程语言
 
-This is the language reference for the Crystal programming language.
+这是crystal编程语言的简介.
 
-Crystal is a programming language with the following goals:
+Crystal包含以下特性:
 
-* Have a syntax similar to Ruby (but compatibility with it is not a goal).
-* Be statically type-checked, but without having to specify the type of variables or method arguments.
-* Be able to call C code by writing bindings to it in Crystal.
-* Have compile-time evaluation and generation of code, to avoid boilerplate code.
-* Compile to efficient native code.
+* 拥有类似ruby的语法(但目标不是为了兼容ruby).
+* 静态类型检测, 但不用给变量和方法参数指定类型.
+* 能通过在crystal编写绑定来调用C代码.
+* 在编译时评估和生成代码, 以避免重复无用代码.
+* 编译为高效的机器码.
 
-## Contributing to the Language Reference
+## 为完善语言做贡献
 
-Do you consider yourself a helpful person? If you find bugs or sections
-which need more clarification you're welcome to contribute to this
-language reference. You can submit a pull request to this repository:
+你认为自己能帮到忙吗?如果你找到错误或者需要更详细说明的地方,
+非常感谢你为crystal做出贡献. 你可以在这个资源提交一个合并请求:
 https://github.com/crystal-lang/crystal-book
 
-Thank you very much!
+非常感谢!
 
 ### Building and Serving Locally
 

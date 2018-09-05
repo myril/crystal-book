@@ -1,40 +1,40 @@
-# Using the compiler
+# 使用编译器
 
-Once you [install](../installation/README.md) the compiler you will have a `crystal` binary at your disposal.
+只要你[安装](../installation/README.md)了编译器, 那么你将有一个叫`crystal`的二进制文件.
 
-In the next sections a dollar sign (`$`) denotes the command line.
+在之后的章节中美元符号(`$`)表示命令行.
 
-## Compiling and running at once
+## 编译和运行
 
-To compile and run a program in a single shot you can invoke `crystal` with a single filename:
+要一次性编译且运行程序, 你可以通过带一个文件名的方式来调用`crystal`:
 
 ```
 $ crystal some_program.cr
 ```
 
-Crystal files end with the `.cr` extension.
+Crystal文件的扩展名是`.cr`.
 
-Alternatively you can use the `run` command:
+另外你可以用`run`命令:
 
 ```
 $ crystal run some_program.cr
 ```
 
-## Creating an executable
+## 创建可执行文件
 
-To create an executable use the `build` command:
+用`build`命令来创建一个可执行文件:
 
 ```
 $ crystal build some_program.cr
 ```
 
-This will create a `some_program` file that you can execute:
+这将创建一个可运行的`some_program`文件:
 
 ```
 $ ./some_program
 ```
 
-**Note:** By default the generated executables **are not fully optimized**. To turn optimizations on, use the `--release` flag:
+**注意:** 默认生成的可执行文件 **是未完全优化的**. 用`--release`标志来开启优化:
 
 ```
 $ crystal build some_program.cr --release

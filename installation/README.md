@@ -1,13 +1,13 @@
 # Installation
 
-Once you install the compiler using one of the following methods, make sure to read [Using the compiler](../using_the_compiler/README.md) to learn how to efficiently use it.
+只要你用以下任一方法安装了编译器, 确保你已经阅读过 [使用编译器](../using_the_compiler/README.md) 以此来了解如何高效的使用它.
 
-* [On Debian And Ubuntu](on_debian_and_ubuntu.html)
-* [On RedHat And CentOS](on_redhat_and_centos.html)
-* [On Arch Linux](on_arch_linux.html)
-* [On Gentoo Linux](on_gentoo_linux.html)
-* [On macOS using Homebrew](on_mac_osx_using_homebrew.html)
-* [On Linux using Linuxbrew](on_linux_using_linuxbrew.html)
-* [On Bash on Ubuntu on Windows](on_bash_on_ubuntu_on_windows.html)
-* [From a tar.gz](from_a_targz.html)
-* [From sources](from_source_repository.html)
+* [Debian和Ubuntu](on_debian_and_ubuntu.html)
+* [RedHat和CentOS](on_redhat_and_centos.html)
+* [Arch Linux](on_arch_linux.html)
+* [Gentoo Linux](on_gentoo_linux.html)
+* [在macOS用Homebrew](on_mac_osx_using_homebrew.html)
+* [在Linux用Linuxbrew](on_linux_using_linuxbrew.html)
+* [在Windows的Linux虚拟机](on_bash_on_ubuntu_on_windows.html)
+* [通过压缩包](from_a_targz.html)
+* [通过源码](from_source_repository.html)
