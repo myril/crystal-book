@@ -40,25 +40,25 @@ $ ./some_program
 $ crystal build some_program.cr --release
 ```
 
-Make sure to always use `--release` for production-ready executables and when performing benchmarks.
+确保生产环境的可执行文件以及在执行基准测试时一直使用`--release`标志.
 
-The reason for this is that performance without full optimizations is still pretty good and provides fast compile times, so you can use the `crystal` command almost as if it were an interpreter.
+这个原因是即使没有完全优化性能仍相当不错并且提供了快速的编译时间, 所以你可以用`crystal`命令就跟它是解释器一样.
 
-To reduce the binary size, you can add the `--no-debug` flag and use the `strip` command. Debug symbols will be removed, use this option if only size is an issue and you won't need to debug the program.
+为了介绍二进制大小, 你可以增加`--no-debug`标志并且用`strip`命令. 调试代码将会被移除, 如果仅仅大小是个问题并且你不需要调试程序可以开启这个标志.
 
-## Creating a statically-linked executable
+## 创建静态链接的可执行文件
 
-To build a statically-linked executable of your program:
+为你的程序构建静态链接可执行文件:
 
 ```
 $ crystal build some_program.cr --release --static
 ```
 
-**Note:** Building statically-linked executables is currently only supported on Alpine Linux.
+**注意:** 构建静态链接可执行文件目前只在Alpine Linux系统上支持.
 
-More information about statically linking [can be found on the wiki](https://github.com/crystal-lang/crystal/wiki/Static-Linking).
+更多关于静态链接的信息[能在这个wiki上找到](https://github.com/crystal-lang/crystal/wiki/Static-Linking).
 
-## Creating a project or library
+## 创建项目或者库
 
 Use the `init` command to create a Crystal project with the standard directory structure.
 
