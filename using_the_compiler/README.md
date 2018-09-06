@@ -60,7 +60,7 @@ $ crystal build some_program.cr --release --static
 
 ## 创建项目或者库
 
-Use the `init` command to create a Crystal project with the standard directory structure.
+用`init`命令来创建带标准目录结构的Crystal项目.
 
 ```
 $ crystal init lib my_cool_lib
@@ -77,9 +77,9 @@ $ crystal init lib my_cool_lib
 Initialized empty Git repository in ~/my_cool_lib/.git/
 ```
 
-## Other commands and options
+## 其他命令和选项
 
-To see the full set of commands, invoke `crystal` without arguments.
+查看所有命令, 直接不带参数的调用`crystal`.
 
 ```
 $ crystal
@@ -99,7 +99,7 @@ Command:
     version, --version, -v   show version
 ```
 
-To see the available options for a particular command, use `--help` after a command:
+查看特定命令的可用选项, 在命令后面带上`--help`:
 
 ```
 $ crystal build --help

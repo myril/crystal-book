@@ -1,13 +1,13 @@
-# On Linux using Linuxbrew
+# 在Linux使用Linuxbrew
 
-To easily install Crystal on a Linux distribution you can use [Linuxbrew](http://linuxbrew.sh/).
+在Linux的发行版你可以通过[Linuxbrew](http://linuxbrew.sh/)来很方便的安装Crystal.
 
 ```
 brew update
 brew install crystal-lang
 ```
 
-If you're planning to contribute to the language itself you might find useful to install LLVM as well. So replace the last line with:
+如果你考虑为语言本身做出贡献, 你也许安装LLVM更有用. 所以你可以用下面命令来替换上面最后一行:
 
 ```
 brew install crystal-lang --with-llvm

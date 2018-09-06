@@ -1,8 +1,8 @@
-# On Arch Linux
+# Arch Linux
 
-Arch Linux includes the Crystal compiler in the Community repository. You should also install `shards`, Crystal's dependency manager.
+Arch Linux在社区版中包含Crystal的编译器. 你还需要安装`shards`, Crystal的包管理器.
 
-## Install
+## 安装
 
 ```
 sudo pacman -S crystal shards

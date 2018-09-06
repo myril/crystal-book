@@ -1,16 +1,16 @@
-# On Debian and Ubuntu
+# Debian和Ubuntu
 
-In Debian derived distributions, you can use the official Crystal repository.
+在Debian的衍生版中, 你可以用官方的Crystal资源库.
 
-## Setup repository
+## 配置资源库
 
-First you have to add the repository to your APT configuration. For easy setup just run in your command line:
+首先你需要添加资源库到你的APT配置中. 为了便于设置, 你只需要在命令行中运行下面命令即可:
 
 ```bash
 curl -sSL https://dist.crystal-lang.org/apt/setup.sh | sudo bash
 ```
 
-That will add the signing key and the repository configuration. If you prefer to do it manually, execute the following commands:
+它将自动添加签名秘钥和资源配置. 如果你期望手动操作, 请执行如下的命令:
 
 ```bash
 curl -sL "https://keybase.io/crystal/pgp_keys.asc" | sudo apt-key add -
@@ -18,14 +18,14 @@ echo "deb https://dist.crystal-lang.org/apt crystal main" | sudo tee /etc/apt/so
 sudo apt-get update
 ```
 
-## Install
-Once the repository is configured you're ready to install Crystal:
+## 安装
+资源库配置完成后, 你就可以准备安装Crystal了:
 
 ```bash
 sudo apt install crystal
 ```
 
-The following packages are not required, but recommended for using the respective features in the standard library:
+以下软件包不是必须的, 但推荐在标准库中使用响应功能:
 
 ```bash
 sudo apt install libssl-dev      # for using OpenSSL
@@ -35,11 +35,11 @@ sudo apt install libgmp-dev      # for using Big numbers
 sudo apt install libreadline-dev # for using Readline
 ```
 
-For building the Crystal compiler itself, a few other dependencies are needed, see [wiki page](https://github.com/crystal-lang/crystal/wiki/All-required-libraries#ubuntu). They are not required for regular compiler use.
+要构建Crystal编译器本身, 还需要一些其他依赖项, 详情查看[wiki页](https://github.com/crystal-lang/crystal/wiki/All-required-libraries#ubuntu). 他们对于常规编译器不是必须的.
 
-## Upgrade
+## 升级
 
-When a new Crystal version is released you can upgrade your system using:
+当Crystal新版本发布后, 你可以在你的系统中用以下命令来升级:
 
 ```bash
 sudo apt update

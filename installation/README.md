@@ -8,6 +8,6 @@
 * [Gentoo Linux](on_gentoo_linux.html)
 * [在macOS用Homebrew](on_mac_osx_using_homebrew.html)
 * [在Linux用Linuxbrew](on_linux_using_linuxbrew.html)
-* [在Windows的Linux虚拟机](on_bash_on_ubuntu_on_windows.html)
+* [Windows的Linux子系统](on_bash_on_ubuntu_on_windows.html)
 * [通过压缩包](from_a_targz.html)
 * [通过源码](from_source_repository.html)

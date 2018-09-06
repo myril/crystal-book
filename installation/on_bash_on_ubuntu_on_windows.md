@@ -1,5 +1,5 @@
-# Windows Subsystem for Linux
+# 在Windows的Linux虚拟机
 
-The Crystal compiler doesn't run on Windows _yet_. But Crystal can be used with the [Windows Subsystem for Linux](https://msdn.microsoft.com/en-us/commandline/wsl/about), a compatibility-layer for Linux executables running natively on Windows 10.
+Crystal编译器在Windows还不能运行. 但Crystal在[Windows的Linux子系统](https://msdn.microsoft.com/en-us/commandline/wsl/about)可以使用, 一个可以在windows 10上运行Linux可执行程序的兼容层.
 
-Several Linux distribution are supported by WSL and the installation instructions for Crystal are equal to that of the respective Linux distribution, most commonly [Debian/Ubuntu](on_debian_and_ubuntu.md).
+Windows的Linux子系统支持多种Linux版本, Crystal的安装说明和最常见的[Debian/Ubuntu](on_debian_and_ubuntu.md)一样.

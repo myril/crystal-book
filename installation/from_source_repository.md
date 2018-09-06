@@ -1,23 +1,23 @@
-# From sources
+# 通过源文件
 
-If you want to contribute then you might want to install Crystal from sources.
+如果你想做出贡献, 也许你想从源文件中来安装Crystal.
 
-1. [Install the latest Crystal release](https://crystal-lang.org/docs/installation). To compile Crystal, you need Crystal :).
+1. [安装最新的Crystal版本](https://crystal-lang.org/docs/installation). 为了编译Crystal, 你需要Crystal :).
 
-2. Make sure a supported LLVM version is present in the path. Currently, Crystal supports LLVM 3.8, 3.9, 4.0, and 5.0. When possible, use the latest one.
+2. 确保在环境变量中存在支持的LLVM版本. 目前Crystal支持LLVM 3.8, 3.9, 4.0, and 5.0. 如果可能请用最新版本.
 
-3. Make sure to install [all the required libraries](https://github.com/crystal-lang/crystal/wiki/All-required-libraries). You might also want to read the [contributing guide](https://github.com/crystal-lang/crystal/blob/master/CONTRIBUTING.md).
+3. 确保暗转改了[所有必须的类库](https://github.com/crystal-lang/crystal/wiki/All-required-libraries). 你也许想要了解[贡献指南](https://github.com/crystal-lang/crystal/blob/master/CONTRIBUTING.md).
 
-4. Clone the repository:
+4. 克隆资源库:
 
 ```
 git clone https://github.com/crystal-lang/crystal
 ```
 
-5. Run `make` to build your own version of the compiler.
-6. Run `make spec` to ensure all specs pass, and you've installed everything correctly.
-7. Use `bin/crystal` to run your crystal files.
+5. 运行`make`来构建你自己的编译器版本.
+6. 运行`make spec`确保所有测试通过, 并且你已经正确安装了所有内容.
+7. 用`bin/crystal`来运行你的crystal文件.
 
-If you would like more information about `bin/crystal`, check out the [using the compiler](https://crystal-lang.org/docs/using_the_compiler/) documentation.
+如果你想了解更多关于`bin/crystal`的信息, 可以查看[使用编译器](https://crystal-lang.org/docs/using_the_compiler/)文档.
 
-Note: The actual binary is built in to `.build/crystal`, but the `bin/crystal` wrapper script is what you should use to run crystal.
+注意: 实际的二进制文件是构建在`.build/crystal`, 但`bin/crystal`是你来运行crystal的包装脚本.

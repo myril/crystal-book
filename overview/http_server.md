@@ -1,6 +1,6 @@
 # HTTP Server
 
-A slightly more interesting example is an HTTP Server:
+一个稍微有趣的例子是HTTP Server:
 
 ```crystal
 require "http/server"
@@ -15,25 +15,25 @@ puts "Listening on http://#{address}"
 server.listen
 ```
 
-The above code will make sense once you read the whole language reference, but we can already learn some things.
+如果你阅读过整个语言参考那么上面的代码就会有意义, 但我们从中已经学到了一些东西.
 
-* You can [require](../syntax_and_semantics/requiring_files.html) code defined in other files:
+* 你可以[require](../syntax_and_semantics/requiring_files.html)在其他文件中定义的代码:
 
     ```crystal
     require "http/server"
     ```
-* You can define [local variables](../syntax_and_semantics/local_variables.html) without the need to specify their type:
+* 你可以定义[本地变量](../syntax_and_semantics/local_variables.html)无需指定他们的类型:
 
     ```crystal
     server = HTTP::Server.new ...
     ```
-* The port of the HTTP server is set by using the method bind_tcp on the object HTTP::Server (the port set to 8080).
+* HTTP server的端口通过HTTP::Server对象的bind_tcp方法来指定 (端口设为8080).
     ```crystal
     address = server.bind_tcp 8080
     ```
-   
 
-* You program by invoking [methods](../syntax_and_semantics/classes_and_methods.html) (or sending messages) to objects.
+
+* 你通过调用对象[方法](../syntax_and_semantics/classes_and_methods.html)(或者给对象发送消息)来编程.
 
     ```crystal
     HTTP::Server.new ...
@@ -47,7 +47,7 @@ The above code will make sense once you read the whole language reference, but w
     server.listen
     ```
 
-* You can use code blocks, or simply [blocks](../syntax_and_semantics/blocks_and_procs.html), which are a very convenient way to reuse code and get some features from the functional world:
+* 你可以用代码blocks或者简单[blocks](../syntax_and_semantics/blocks_and_procs.html), 这是一种非常简单的方式来复用代码并且从功能世界中获取一些功能:
 
     ```crystal
     HTTP::Server.new do |context|
@@ -59,5 +59,4 @@ The above code will make sense once you read the whole language reference, but w
 
     ```crystal
     "Hello world! The time is #{Time.now}"
-    ``` 
-
+    ```
