@@ -1,8 +1,8 @@
-# Literals
+# 字面量
 
-Crystal provides several literals for creating values of some basic types.
- 
-| Literal                                   | Sample values                               |
+Crystal提供几种字面量来创建一些基本类型的值.
+
+| 字面量                                     | 示例值                                       |
 |---                                        |---                                          |
 | [Nil](./literals/nil.html)                | `nil`                                       |
 | [Bool](./literals/bool.html)              | `true`, `false`                             |

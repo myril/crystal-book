@@ -1,8 +1,8 @@
 # Integers
 
-There are four signed integer types, and four unsigned integer types:
+它们包含4个有符号数值类型和4个无符号数值类型:
 
-Type | Length  | Minimum Value | Maximum Value
+类型 | 长度  | 最小值 | 最大值
  ---------- | -----------: | -----------: |-----------:
 [Int8](http://crystal-lang.org/api/Int8.html)  | 8       | -128 | 127
 [Int16](http://crystal-lang.org/api/Int16.html)  | 16 | −32,768 | 32,767

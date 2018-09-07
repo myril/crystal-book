@@ -55,7 +55,7 @@ server.listen
     end
     ```
 
-* You can easily create strings with embedded content, known as string interpolation. The language comes with other [syntax](../syntax_and_semantics/literals.html) as well to create arrays, hashes, ranges, tuples and more:
+* 你可以很简单的创建带嵌入内容的字符串, 被称为字符串插值. 该语言还包含创建arrays, hashes, ranges, tuples等等[语法](../syntax_and_semantics/literals.html):
 
     ```crystal
     "Hello world! The time is #{Time.now}"

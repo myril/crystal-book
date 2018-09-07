@@ -1,11 +1,11 @@
-# Syntax and Semantics
+# 语法和语义
 
-The program’s source code must be encoded in UTF-8.
+程序的源码必须是UTF-8的编码.
 
-* [Comments](comments.html)
-* [Literals](literals.html)
-* [Assignment](assignment.html)
-* [Local Variables](local_variables.html)
+* [注释](comments.html)
+* [字面量](literals.html)
+* [赋值](assignment.html)
+* [本地变量](local_variables.html)
 * [Control Expression](control_expressions.html)
 * [Requiring Files](requiring_files.html)
 * [Types and methods](types_and_methods.html)

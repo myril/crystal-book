@@ -15,7 +15,7 @@
 * [概述和示例](overview/README.md)
    * [Hello World!](overview/hello_world.md)
    * [HTTP Server](overview/http_server.md)
-* [Syntax and semantics](syntax_and_semantics/README.md)
+* [语法和语义](syntax_and_semantics/README.md)
    * [Comments](syntax_and_semantics/comments.md)
    * [Literals](syntax_and_semantics/literals.md)
        * [Nil](syntax_and_semantics/literals/nil.md)
