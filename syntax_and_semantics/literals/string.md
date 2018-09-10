@@ -1,8 +1,8 @@
 # String
 
-A [String](http://crystal-lang.org/api/String.html) represents an immutable sequence of UTF-8 characters.
+[String](http://crystal-lang.org/api/String.html)表示不可变的UTF-8字符序列.
 
-A String is typically created with a string literal enclosing UTF-8 characters in double quotes (`"`):
+通常用双引号(`"`)括一些UTF-8字符来创建一个String:
 
 ```crystal
 "hello world"
@@ -10,38 +10,38 @@ A String is typically created with a string literal enclosing UTF-8 characters i
 
 ## Escaping
 
-A backslash denotes a special character inside a string, which can either be a named escape sequence or a numerical representation of a unicode codepoint.
+反斜杠表示字符串中的一个特殊字符, 它可以是一个命令的转义字符串或者用数值标识的unicode代码点.
 
-Available escape sequences:
+可用的转义字符串:
 ```crystal
-"\"" # double quote
-"\\" # backslash
-"\a" # alert
-"\b" # backspace
-"\e" # escape
-"\f" # form feed
-"\n" # newline
-"\r" # carriage return
-"\t" # tab
-"\v" # vertical tab
-"\NNN" # octal ASCII character
-"\xNN" # hexadecimal ASCII character
-"\uNNNN" # hexadecimal unicode character
-"\u{NNNN...}" # hexadecimal unicode character
+"\"" # 双引号
+"\\" # 反斜杠
+"\a" # 响铃
+"\b" # 回退
+"\e" # 中止,控制(主要用于命令行样式展示)
+"\f" # 换页
+"\n" # 新行
+"\r" # 回车
+"\t" # 制表
+"\v" # 纵向制表
+"\NNN" # 8进制ASCII字符
+"\xNN" # 16进制ASCII字符
+"\uNNNN" # 16进制unicode字符
+"\u{NNNN...}" # 16进制unicode字符
 ```
 
-Any other character following a backslash is interpreted as the character itself.
+任何带反斜杠的字符都会作为它本身插入.
 
-A backslash followed by at most three digits ranging from 0 to 7 denotes a code point written in octal:
+一个反斜杠后跟最多3个0到7的随机数字来表示用8进制写的代码点:
 
 ```crystal
 "\101" # => "A"
 "\123" # => "S"
 "\12"  # => "\n"
-"\1"   # string with one character with code point 1
+"\1"   # 一个字符的字符串, 代码点是1
 ```
 
-A backslash followed by a `u` denotes a unicode codepoint. It can either be followed by exactly four hexadecimal characters representing the unicode bytes (`\u0000` to `\uFFFF`) or a number of one to six hexadecimal characters wrapped in curly braces (`\u{0}` to `\u{10FFFF}`.
+反斜杠后跟一个`u`来表示一个unicode代码点. 它也能跟随确切的4位16进制字符来表示unicode字节(`\u0000` to `\uFFFF`)或者用大括号包起来的1到6个16进制字符(`\u{0}` to `\u{10FFFF}`.
 
 ```crystal
 "\u0041"    # => "A"
@@ -49,7 +49,7 @@ A backslash followed by a `u` denotes a unicode codepoint. It can either be foll
 "\u{1F52E}" # => "&#x1F52E;"
 ```
 
-One curly brace can contain multiple unicode characters each separated by a whitespace.
+一个大括号可以包含多个unicode字符串, 用空格隔开.
 
 ```crystal
 "\u{48 45 4C 4C 4F}" # => "HELLO"
