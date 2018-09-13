@@ -1,8 +1,8 @@
 # Symbol
 
-A [Symbol](http://crystal-lang.org/api/Symbol.html) represents a unique name inside the entire source code.
+[Symbol](http://crystal-lang.org/api/Symbol.html)表示在整个源码中都是唯一的名字.
 
-Symbols are interpreted at compile time and cannot be created dynamically. The only way to create a Symbol is by using a symbol literal, denoted by a colon (`:`) followed by an identifier. The identifier may optionally be enclosed in double quotes (`"`).
+Symbols在编译时解释并且不能动态创建. 唯一的创建方法是用symbol文字, 用(`:`)加标识符来表示. 标识符也可以用(`"`)引起来.
 
 ```crystal
 :unquoted_symbol
@@ -10,16 +10,16 @@ Symbols are interpreted at compile time and cannot be created dynamically. The o
 :"a" # identical to :a
 ```
 
-A double-quoted identifier can contain any unicode character including white spaces and accepts the same escape sequences as a [string literal](./string.html), yet no interpolation.
+双引号标识符能包含任何unicode字符, 包括空格和一些转义字符如[string literal](./string.html), 还不能用插值.
 
-For an unquoted identifier the same naming rules apply as for methods. It can contain alphanumeric characters, underscore (`_`) or characters with a code point greater than `159`(`0x9F`). It must not start with a number and may end with an exclamation mark (`!`) or question mark (`?`).
+非双引号标识符的命令规则跟方法名是一样的. 能包含字母数值字符, 下划线(`_`)或者代码点大于`159`(`0x9F`)的字符. 且不能以数字开头, 能以感叹号(`!`)或者问号(`?`)结尾.
 
 ```crystal
 :question?
 :exclamation!
 ```
 
-All [Crystal operators](../operators.html) can be used as symbol names unquoted:
+所有[Crystal操作符](../operators.html)都能作为symbol的非引号名字:
 ```crystal
 :+
 :-
@@ -49,11 +49,11 @@ All [Crystal operators](../operators.html) can be used as symbol names unquoted:
 :=~
 ```
 
-Internally, symbols are implemented as constants with a numeric value of type `Int32`.
+底层, symbols是用`Int32`类型的常量数值来实现的.
 
-## Percent symbol array literal
+## 百分号symbol数组
 
-Besides the single symbol literal, there is also a percent literal to create an [Array](https://crystal-lang.org/api/Array.html) of symbols. It is indicated by `%i` and a pair of delimiters. Valid delimiters are parenthesis `()`, square brackets `[]`, curly braces `{}`, angles `<>` and pipes `||`. Except for the pipes, all delimiters can be nested meaning a start delimiter inside the string escapes the next end delimiter.
+除了单个symbol文字, 也可以用百分号来创建symbol[数组](https://crystal-lang.org/api/Array.html). 它用`%i`加一对分隔符来指示. 合法的分隔符有括号`()`, 方括号`[]`, 大括号`{}`, 尖括号`<>`和管道`||`. 除了管道, 所有的分隔符都能嵌套, 这意味着字符串内的开始分隔符会转义下一个结束分隔符.
 
 ```crystal
 %i(foo bar baz) # => [:foo, :bar, :baz]
@@ -61,7 +61,7 @@ Besides the single symbol literal, there is also a percent literal to create an 
 %i(foo(bar) baz) # => [:"foo(bar)", :baz]
 ```
 
-Identifiers may contain any unicode characters. Individual symbols are separated by a single space character (` `) which must be escaped to use it as a part of an identifier.
+标识符能包含任一unicode字符. 单个symbols由一个空格来分割, 对其(` `)转义之后能作为标识符的一部分.
 
 ```crystal
 %i(foo\ bar baz) # => [:"foo bar", :baz]

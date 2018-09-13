@@ -16,7 +16,7 @@
    * [Hello World!](overview/hello_world.md)
    * [HTTP Server](overview/http_server.md)
 * [语法和语义](syntax_and_semantics/README.md)
-   * [Comments](syntax_and_semantics/comments.md)
+   * [注释](syntax_and_semantics/comments.md)
    * [Literals](syntax_and_semantics/literals.md)
        * [Nil](syntax_and_semantics/literals/nil.md)
        * [Bool](syntax_and_semantics/literals/bool.md)
