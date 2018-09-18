@@ -1,57 +1,57 @@
 # Hash
 
-A [Hash](http://crystal-lang.org/api/Hash.html) is a generic collection of key-value pairs mapping keys of type `K` to values of type `V`.
+[Hash](http://crystal-lang.org/api/Hash.html)是将`K`类型的键映射到`V`类型的值的键值对的泛型集合.
 
-Hashes are typically created with a hash literal denoted by curly braces (`{ }`) enclosing a list of pairs using `=>` as delimiter between key and value and separated by commas `,`.
+Hashes通常是用大括号(`{ }`)括起来的一组用逗号`,`区分开的键值对且在键和值之间用`=>`作为分隔符的hash文本来创建.
 
 ```crystal
 {"one" => 1, "two" => 2}
 ```
 
-# Generic Type Argument
+# 泛型类型参数
 
-The generic type arguments for keys `K` and values `V` are inferred from the types of the keys or values inside the literal, respectively. When all have the same type, `K`/`V` equals to that. Otherwise it will be a union of all key types or value types respectively.
+键`K`和值`V`的泛型类型参数分别通过文本内键和值的类型推导出来的. 如果各自参数类型有相同的类型, 那么`K`/`V`就等于它们, 否则就是所有各自键值类型的并集.
 
 ```crystal
 {1 => 2, 3 => 4}     # Hash(Int32, Int32)
 {1 => 2, 'a' => 3}   # Hash(Int32 | Char, Int32)
 ```
 
-Explicit types can be specified by immediately following the closing bracket with `of` (separated by whitespace), a key type (`K`) followed by `=>` as delimiter and a value type (`V`). This overwrites the inferred types and can be used for example to create a hash that holds only some types initially but can accept other types as well.
+显式类型通过在结束大括号后面跟`of`(用空格隔开), 键类型(`K`)后跟分隔符`=>`和值类型(`V`)来指定.  这会重载推导类型, 初始可以创建一个只包含部分类型但还能接收其他类型的hash.
 
-Empty hash literals always need type specifications:
+空hash文本必须要指定类型:
 ```crystal
 {} of Int32 => Int32 # => Hash(Int32, Int32).new
 ```
 
-## Hash-like Type Literal
+## 类Hash类型文本
 
-Crystal supports an additional literal for hashes and hash-like types. It consists of the name of the type followed by a list of  comma separated key-value pairs enclosed in curly braces (`{}`).
+针对hashes和类hash类型Crystal支持额外的文本表示. 它是由类型名称后跟用大括号(`{}`)括起来的一组用逗号来区分的键值对组成的.
 
 ```crystal
 Hash{"one" => 1, "two" => 2}
 ```
 
-This literal can be used with any type as long as it has an argless constructor and responds to `[]=`.
+这个文本能适用所有类型, 只要它有argless构造函数并且能响应`[]=`.
 
 ```crystal
 HTTP::Headers{"foo" => "bar"}
 ```
 
-For a non-generic type like `HTTP::Headers`, this is equivalent to:
+像`HTTP::Headers`这类非泛型类型, 则等同于:
 
 ```crystal
 headers = HTTP::Headers.new
 headers["foo"] = "bar"
 ```
 
-For a generic type, the generic types are inferred from the types of the keys and values in the same way as with the hash literal.
+对于泛型类型, 它是用和hash文本一样的方式通过键和值来推导出来的.
 
 ```crystal
 MyHash{"foo" => 1, "bar" => "baz"}
 ```
 
-If `MyHash` is generic, the above is equivalent to this:
+如果`MyHash`是泛型, 则上面的等同于这个:
 
 ```crystal
 my_hash = MyHash(typeof("foo", "bar"), typeof(1, "baz")).new
@@ -59,7 +59,7 @@ my_hash["foo"] = 1
 my_hash["bar"] = baz
 ```
 
-The type arguments can be explicitly specified as part of the type name:
+类型参数可以显式指定为类型名字的一部分:
 
 ```crystal
 MyHash(String, String | Int32) {"foo" => "bar"}

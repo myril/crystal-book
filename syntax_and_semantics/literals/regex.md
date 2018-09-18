@@ -1,8 +1,8 @@
-# Regular Expressions
+# 正则表达式
 
-Regular expressions are represented by the [Regex](http://crystal-lang.org/api/Regex.html) class.
+正则表达式是由[Regex](http://crystal-lang.org/api/Regex.html)类来表示的.
 
-A Regex is typically created with a regex literal using [PCRE](http://pcre.org/pcre.txt) syntax. It consists of a string of UTF-8 character enclosed in forward slashes (`/`):
+正则通常是用[PCRE](http://pcre.org/pcre.txt)语法的正则文本来创建的. 它是由正斜杠(`/`)包起来UTF-8字符串组成:
 
 ```crystal
 /foo|bar/
@@ -11,38 +11,38 @@ A Regex is typically created with a regex literal using [PCRE](http://pcre.org/p
 /あ/
 ```
 
-## Escaping
+## 转义
 
-Regular expressions support the same [escape sequences as String literals](./string.html).
+正则表达式支持同样的[转义字符串文本](./string.html).
 
 ```crystal
-/\// # slash
-/\\/ # backslash
-/\b/ # backspace
-/\e/ # escape
-/\f/ # form feed
-/\n/ # newline
-/\r/ # carriage return
-/\t/ # tab
-/\v/ # vertical tab
-/\NNN/ # octal ASCII character
-/\xNN/ # hexadecimal ASCII character
-/\uNNNN/ # hexadecimal unicode character
-/\u{NNNN...}/ # hexadecimal unicode character
+/\// # 斜杠
+/\\/ # 反斜杠
+/\b/ # 回退
+/\e/ # esc
+/\f/ # 换页
+/\n/ # 新行
+/\r/ # 回车
+/\t/ # 制表
+/\v/ # 纵向制表
+/\NNN/ # 8进制ASCII字符
+/\xNN/ # 16进制ASCII字符
+/\uNNNN/ # 16进制unicode字符
+/\u{NNNN...}/ # 16进制unicode字符
 ```
 
-The delimiter character `/` must be escaped inside slash-delimited regular expression literals.
-Note that special characters of the PCRE syntax need to be escaped if they are intended as literal characters.
+分隔符`/`在斜杠分割的正则表达式文本中必须转义.
+注意, 如果PCRE语法指定的字符作为文本字符的话, 则必须进行转义.
 
-## Interpolation
+## 插值
 
-Interpolation works in regular expression literals just as it does in [string literals](./string.html). Be aware that using this feature will cause an exception to be raised at runtime, if the resulting string results in an invalid regular expression.
+在正则表达式文本中插值工作和[字符串文本](./string.html)一样. 需要注意的是, 如果结果字符串是一个非法的正则表达式, 那么在使用此功能时将会在运行时抛出异常.
 
-## Modifiers
-The closing delimiter may be followed by a number of optional modifiers to adjust the matching behaviour of the regular expression.
+## 修饰符
+闭合分隔符后面可以跟一些可选的修饰符来调整正则表达式的匹配行为.
 
-* `i`: case-insensitive matching (`PCRE_CASELESS`):  Unicode letters in the pattern match both upper and lower case letters in the subject string.
-* `m`: multiline matching (`PCRE_MULTILINE`): The *start of line* (`^`) and *end of line* (`$`) metacharacters match immediately following or immediately before internal newlines in the subject string, respectively, as well as at the very start and end.
+* `i`: 不区分大小写匹配 (`PCRE_CASELESS`):  Unicode letters in the pattern match both upper and lower case letters in the subject string.
+* `m`: 多行匹配 (`PCRE_MULTILINE`): The *start of line* (`^`) and *end of line* (`$`) metacharacters match immediately following or immediately before internal newlines in the subject string, respectively, as well as at the very start and end.
 * `x`: extended whitespace matching (`PCRE_EXTENDED`): Most white space characters in the pattern are totally ignored except when ignore or inside a character class. Unescaped hash characters `#` denote the start of a comment ranging to the end of the line.
 
 ```crystal
