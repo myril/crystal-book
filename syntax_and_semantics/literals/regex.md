@@ -41,7 +41,7 @@
 ## 修饰符
 闭合分隔符后面可以跟一些可选的修饰符来调整正则表达式的匹配行为.
 
-* `i`: 不区分大小写匹配 (`PCRE_CASELESS`):  Unicode letters in the pattern match both upper and lower case letters in the subject string.
+* `i`: 不区分大小写匹配 (`PCRE_CASELESS`):  模式匹配的Unicode字符将会匹配目标字符串对应的大小写字符.
 * `m`: 多行匹配 (`PCRE_MULTILINE`): The *start of line* (`^`) and *end of line* (`$`) metacharacters match immediately following or immediately before internal newlines in the subject string, respectively, as well as at the very start and end.
 * `x`: extended whitespace matching (`PCRE_EXTENDED`): Most white space characters in the pattern are totally ignored except when ignore or inside a character class. Unescaped hash characters `#` denote the start of a comment ranging to the end of the line.
 
